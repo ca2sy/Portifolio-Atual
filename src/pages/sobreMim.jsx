@@ -53,7 +53,7 @@ export default function SobreMim() {
       <div className="relative z-10 bg-[#2a2a33] border-4 border-[#FF99B6] rounded-2xl shadow-[0_0_25px_#FF99B6] p-8 md:p-12 max-w-4xl w-[90%] flex flex-col md:flex-row items-center gap-10">
         <div className="relative w-48 h-48 border-4 border-[#00FFCC] rounded-xl overflow-hidden shadow-[0_0_20px_#00FFCC] hover:scale-105 transition-transform duration-300">
           <img
-            src="/assets/eu.jpeg"
+            src="/image/eu.jpeg"
             alt="Rafaela Costa"
             className="object-cover w-full h-full"
           />
