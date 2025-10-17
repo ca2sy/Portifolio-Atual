@@ -22,7 +22,7 @@ export default function Contact() {
       name: "Currículo",
       icon: "📄",
       color: "#FF99B6",
-      link: "src/assets/pdf/Currículo.pdf",
+      link: "/pdf/Currículo.pdf",
       download: true,
       description: "Baixe meu Currículo"
     }

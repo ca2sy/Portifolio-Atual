@@ -150,11 +150,11 @@ export default function Skills() {
 
  
               <h3 
-                className="text-white font-joystix text-center text-xs mb-2"
-                style={{ textShadow: `0 0 8px ${skill.color}` }}
-              >
-                {skill.name}
-              </h3>
+  className="text-white font-joystix text-center text-xs mb-2"
+  style={{ textShadow: `0 0 8px ${skill.color}` }}
+>
+  {skill.name}
+</h3>
 
 
               <div className="relative">
