@@ -40,39 +40,11 @@ export default function Projects() {
   return (
     <div className="relative bg-gradient-to-b from-[#0f1a2e] via-[#193555] to-[#0f1a2e] py-20 px-6 overflow-hidden">
 
-      <div className="absolute inset-0 opacity-5">
-        <div className="w-full h-full" style={{
-          backgroundImage: 'linear-gradient(#4DC1D7 1px, transparent 1px), linear-gradient(90deg, #4DC1D7 1px, transparent 1px)',
-          backgroundSize: '80px 80px'
-        }}></div>
+      {/* Gradiente de fundo simples e estático */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF99B6] rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#4DC1D7] rounded-full blur-3xl" />
       </div>
-
-   
-      <div className="absolute top-20 -left-32 w-96 h-96 border-2 border-[#FF99B6]/20 rounded-full" />
-      <div className="absolute bottom-20 -right-32 w-96 h-96 border-2 border-[#4DC1D7]/20 rounded-full" />
-      
-
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FF99B6]/10 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#4DC1D7]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
-
-      {[...Array(15)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute rounded-full"
-          style={{
-            width: `${Math.random() * 4 + 2}px`,
-            height: `${Math.random() * 4 + 2}px`,
-            background: i % 2 === 0 ? '#FF99B6' : '#4DC1D7',
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            opacity: 0.3,
-            animation: `float-slow ${5 + Math.random() * 5}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 3}s`
-          }}
-        />
-      ))}
 
       <div className="text-center mb-16 relative z-10">
         <h2 className="text-[#FF99B6] text-4xl md:text-6xl font-joystix mb-4 drop-shadow-[0_0_15px_#FF99B6]">
@@ -82,7 +54,6 @@ export default function Projects() {
           ~ Meus trabalhos desenvolvidos ~
         </p>
       </div>
-
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {projects.map((project, index) => {
@@ -98,7 +69,6 @@ export default function Projects() {
                 animation: `fadeInUp 0.6s ease-out ${index * 0.15}s both`
               }}
             >
-        
               <div
                 className="relative bg-gradient-to-br from-[#1e2838] to-[#0f1620] rounded-2xl p-6 transition-all duration-300 h-full flex flex-col"
                 style={{
@@ -109,7 +79,6 @@ export default function Projects() {
                   transform: isHovered ? 'translateY(-8px)' : 'translateY(0)'
                 }}
               >
-             
                 <div 
                   className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
                   style={{
@@ -117,7 +86,6 @@ export default function Projects() {
                   }}
                 />
 
-         
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className="text-5xl transition-transform duration-300"
@@ -138,7 +106,6 @@ export default function Projects() {
                   </h3>
                 </div>
 
-           
                 <div 
                   className="h-0.5 mb-4 rounded-full"
                   style={{
@@ -146,12 +113,10 @@ export default function Projects() {
                   }}
                 />
 
-              
                 <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
-        
                 <div className="space-y-3">
                   {project.links.map((link, i) => (
                     <a
@@ -174,7 +139,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-               
                 {isHovered && (
                   <div 
                     className="absolute inset-0 rounded-2xl pointer-events-none"
@@ -186,7 +150,6 @@ export default function Projects() {
                 )}
               </div>
 
-           
               {isHovered && (
                 <div className="absolute -top-2 -right-2 text-2xl animate-bounce">
                   ✨
@@ -206,17 +169,6 @@ export default function Projects() {
           to {
             opacity: 1;
             transform: translateY(0);
-          }
-        }
-
-        @keyframes float-slow {
-          0%, 100% { 
-            transform: translateY(0px) translateX(0px);
-            opacity: 0.2;
-          }
-          50% { 
-            transform: translateY(-30px) translateX(15px);
-            opacity: 0.5;
           }
         }
       `}</style>

@@ -30,14 +30,7 @@ export default function Header() {
     return () => clearInterval(cursorInterval);
   }, []);
 
-  const clouds = [
-    { left: "5%", delay: "0s" },
-    { left: "20%", delay: "1s" },
-    { left: "35%", delay: "2s" },
-    { left: "50%", delay: "0.5s" },
-    { left: "65%", delay: "1.5s" },
-    { left: "80%", delay: "2.5s" },
-  ];
+
 
   return (
     <div className="relative overflow-hidden">
@@ -60,27 +53,6 @@ export default function Header() {
           <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-[#00FFCC]/30 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-[#4DC1D7]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '0.5s' }} />
         </div>
-
-
-        {clouds.map((cloud, index) => (
-          <div
-            key={index}
-            style={{ 
-              left: cloud.left,
-              animationDelay: cloud.delay
-            }}
-            className={`absolute top-8 w-20 h-12 md:w-28 md:h-16 bg-white/80 rounded-full ${
-              index % 2 === 0 ? "mt-0" : "mt-12"
-            } animate-cloud-float opacity-70`}
-          >
-
-            <div className="relative w-full h-full">
-              <div className="absolute top-0 left-1/4 w-1/2 h-3/4 bg-white/80 rounded-full"></div>
-              <div className="absolute top-1/4 left-0 w-2/3 h-1/2 bg-white/80 rounded-full"></div>
-              <div className="absolute top-1/4 right-0 w-2/3 h-1/2 bg-white/80 rounded-full"></div>
-            </div>
-          </div>
-        ))}
 
 
         {[...Array(15)].map((_, i) => (
